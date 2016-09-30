@@ -1,0 +1,1 @@
+cp usaptest.pp /etc/puppetlabs/code/environments/production/manifests/usaptest.pp
