@@ -1,0 +1,7 @@
+yum install git-1.8.3.1-6.el7_2.1.x86_64
+yum install openssh-6.6.1p1-25.el7_2.x86_64
+yum install httpd-2.4.6-40.el7_2.4.x86_64
+yum install mysql-community-client.x86_64 
+yum install strace-4.8-11.el7.x86_64
+yum install sudo.x86_64
+

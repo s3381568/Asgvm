@@ -1,4 +1,5 @@
-printf "mod \'puppetlabs-mysql\'" > /etc/puppetlabs/code/environments/production/Puppetfile
-/usr/local/bin/puppet module install puppetlabs-mysql
 chkconfig sshd on --level 3
 chkconfig httpd on --level 3
+chkconfig mysqld on --level 3
+chkconfig strace on --level 3
+chkconfig sudo on --level 3
