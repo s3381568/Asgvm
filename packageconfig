@@ -1,0 +1,11 @@
+TEST='DocumentRoot "/var/www/html"'
+TEST2='DocumentRoot "/var/www"'
+while read a ; do echo ${a//#PermitRootLogin yes/PermitRootLogin no} ; done < /etc/ssh/sshd_config  > /tmp/test ;
+while read a ; do echo ${a//PermitRootLogin yes/PermitRootLogin no} ; done < /tmp/test  > /tmp/test2 ;
+while read a ; do echo ${a//#PermitRootLogin no/PermitRootLogin no} ; done < /tmp/test2  > /etc/ssh/sshd_config ;
+rm /tmp/test /tmp/test2
+while read a ; do echo ${a//$TEST/$TEST2} ; done < /etc/httpd/conf/httpd.conf > /tmp/test
+mv /tmp/test /etc/httpd/conf/httpd.conf
+LINE='becca           ALL=(ALL)       NOPASSWD: ALL'
+FILE='/etc/sudoers'
+grep -q "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
