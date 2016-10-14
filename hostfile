@@ -1,0 +1,7 @@
+LINE="131.170.1.1 usap.rmit.edu.au usap"
+FILE="/etc/hosts"
+if [ -a $FILE ]; then
+	grep -q "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
+else
+	echo "$LINE" >> "$FILE"
+fi

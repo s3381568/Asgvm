@@ -1,5 +1,3 @@
 chkconfig sshd on --level 3
 chkconfig httpd on --level 3
 chkconfig mysqld on --level 3
-chkconfig strace on --level 3
-chkconfig sudo on --level 3

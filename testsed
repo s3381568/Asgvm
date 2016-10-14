@@ -1,0 +1,6 @@
+LINE='\ \ notice("Agent run starting at $(date +"%T")")'
+FILE=test.txt
+#set line number for line after the one containing $LINE
+LINEN=$(grep -n "node default {" $FILE |  grep -Eo '^[^:]+')
+$((LINEN++))
+grep -n $LINE $FILE | sed -i "${LINEN}i${LINE}" $FILE

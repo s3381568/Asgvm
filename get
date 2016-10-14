@@ -1,1 +1,3 @@
 cp /etc/puppetlabs/code/environments/production/manifests/usaptest.pp .
+cp /etc/puppetlabs/code/environments/production/manifests/servicerestarts.pp .
+

@@ -16,6 +16,5 @@ class usaptest {
 	group { 'cars':
 		ensure => 'present',
 	}
-	chkconfig sshd on --level 3
 }
 
