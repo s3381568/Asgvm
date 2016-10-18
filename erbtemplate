@@ -1,0 +1,1 @@
+/opt/puppetlabs/puppet/bin/erb /var/www/index.html.erb

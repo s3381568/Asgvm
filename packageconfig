@@ -9,4 +9,4 @@ mv /tmp/test /etc/httpd/conf/httpd.conf
 LINE='becca           ALL=(ALL)       NOPASSWD: ALL'
 FILE='/etc/sudoers'
 grep -q "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
-printf 'PATH="${PATH}:/bin/strace"' > /etc/profile.d/custom.sh
+printf 'PATH="${PATH}:/bin/strace:/usr/local/bin"' > /etc/profile.d/custom.sh

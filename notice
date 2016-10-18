@@ -1,0 +1,7 @@
+FINDME="node default {"
+LINE='\ \ notice("Agent run starting at $(date +"%T")")'
+FILE="site.pp"
+#set line number for line after the one containing $LINE
+LINEN=$(grep -n "$FINDME" "$FILE" |  grep -Eo '^[^:]+')
+((LINEN++))
+grep -q "$LINE" "$FILE" || sed -i "${LINEN}i${LINE}" "$FILE"

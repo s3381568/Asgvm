@@ -1,0 +1,8 @@
+./get
+./installs
+./packageconfig
+./hostfile
+./startupserviceschange
+./notice
+./erbtemplate
+./put
